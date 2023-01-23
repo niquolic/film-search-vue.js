@@ -10,6 +10,13 @@
         </div>
       </RouterLink>
     </div>
+
+    <form @submit.prevent="" class="form-search-box">
+      <input type="text" placeholder="Que cherchez-vous?"/>
+      <input type="submit" value="Rechercher"/>
+    </form>
+
+    <div class="movies-list">MOVIES</div>
   </div>
 </template>
 
@@ -49,6 +56,57 @@ export default {
 
       p {
         color: #FFF;
+      }
+    }
+  }
+
+  .form-search-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+
+    input {
+      display: block;
+      appearance: none;
+      border: none;
+      outline: none;
+      background: none;
+
+      &[type="text"] {
+        width: 100%;
+        color: #FFF;
+        background-color: #496583;
+        font-size: 20px;
+        padding: 10px 16px;
+        border-radius: 8px;
+        margin-bottom: 15px;
+        transition: 0.4s;
+
+        &::placeholder {
+          color: #FFF;
+        }
+
+        &:focus {
+          box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.2);
+        }
+      }
+
+      &[type="submit"] {
+        width: 100%;
+        max-width: 300px;
+        background-color: #42B883;
+        padding: 16px;
+        border-radius: 8px;
+        color: #FFF;
+        font-size: 20px;
+        text-transform: uppercase;
+        transition: 0.4s;
+
+        &:active {
+          background-color: #3B8070;
+        }
       }
     }
   }
