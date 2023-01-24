@@ -6,7 +6,7 @@
         alt="The Last Of Us" class="featured-img">
         <div class="detail">
           <h3>The Last Of Us</h3>
-          <p>The Last Of Us, a sad story</p>
+          <p>When you're lost in the darkness, look for the light.</p>
         </div>
       </RouterLink>
     </div>
